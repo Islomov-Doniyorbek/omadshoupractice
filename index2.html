@@ -62,6 +62,11 @@
             text-align: center;
             font-size: 17px;
         }
+        #h3 {
+            color: yellow;
+            letter-spacing: 7px;
+            font-size: 18px;
+        }
     </style>
 
 </head>
@@ -69,7 +74,8 @@
 <body >
     <div class="header">
         <h1>Omad Shou Veb o'yiniga xush kelibsiz!</h1>
-        <h3>Yutug'ingiz: <span id="winner"></span></h3>
+        <h3 id="winner">...</h3>
+        <h3>Bugungi urinishda yutilgan sovg'alar: <span id="h3"></span></h3>
     </div>
     <div class="wheel">
         <canvas class="" id="canvas" width="350" height="350"></canvas>
@@ -91,6 +97,7 @@ chicken</textarea>
     </div> -->
 
     <script>
+        alert("Assalaamu alaykum! Omad shou veb o'yiniga xush kelibsiz! Bu teleo'yindan ulkan farq qiladi! Siz baraban markazidagi oq tugmani bossangiz uni harakatga keltira olasiz! Eslatma! Siz bir kunda faqatgina 3 marta sinab ko'rishingiz mumkin bo'ladi holos! Omadlar bo'lsin!!!")
         function randomColor(){
             r = Math.floor(Math.random() * 255);
             g = Math.floor(Math.random() * 255);
@@ -236,16 +243,20 @@ chicken</textarea>
             window.requestAnimationFrame(animate);
         }
 
+        let a = 1;
         function spin(){
             let r = Math.floor(Math.random() * items.length);
-            let ritem = items[r]
+            let ritem = items[r];
+            let h3 = document.querySelector("#h3")
             if(speed != 0){
                 return
             }
-            
+            let pricing = []
+            pricing.push(ritem)
             setTimeout(() => {
+                h3.textContent += `${ritem}, `
                 alert(`Tabriklaymiz! ${ritem} sohibi bo'ldingiz!`)
-            }, 14500);
+            }, 10000);
             
             
             
@@ -263,8 +274,17 @@ chicken</textarea>
             pause = false
             window.requestAnimationFrame(animate);
 
+            let wheel = document.querySelector(".wheel");
+            let btn = document.querySelector(".wheel button");
+            if(a==3){
+                btn.disabled = true;
+            }
+           
+        a++;
         
         }
+
+       
         createWheel()
     </script>
 </body>
