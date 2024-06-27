@@ -42,7 +42,7 @@
             border-right: 30px solid white; 
             position: absolute;
             top: 50%;
-            right: -500%;
+            right: -350%;
             transform: translateY(-50%);
         }
         textarea{
@@ -70,7 +70,7 @@
         <h3>Yutug'ingiz: <span id="winner"></span></h3>
     </div>
     <div class="wheel">
-        <canvas class="" id="canvas" width="500" height="500"></canvas>
+        <canvas class="" id="canvas" width="350" height="350"></canvas>
         <button class="center-circle" onclick="spin()">
             <div class="triangle"></div>
         </button>
@@ -131,7 +131,7 @@ chicken</textarea>
         // }
 
         // let items = document.getElementsByTagName("textarea")[0].value.split("\n");
-        let items = ["Telegram Premium","Onix","50 000 000 so'm","Damas","10 000 000 so'm","Mebel","FIFA chipta","Jesco to'plam","25 000 000 so'm","Damas: Labo","Umraga yo'llanma","38 000 000 so'm","Muzlatkich","Skuter","Bo'sh quti","BYD avtomobili","Qora yo'l","Ikki xonali uy","Elma  to'plami", "43 000 000 so'm"]
+        let items = ["Tg Premium","Onix","50 000 000 ","Tandir","10 000 000 ","Mebel","FIFA ","Jesco ","25 000 000 ","Damas","Umra ","38 000 000 ","Muzlatkich","Skuter","Bo'sh quti","BYD","Qora yo'l","Uy","Salfetka", "43 000 000 "]
         let currentDeg = 0
         let step = 360/items.length
         let colors = []
@@ -142,7 +142,7 @@ chicken</textarea>
         }
 
         function createWheel(){
-            items = ["Telegram Premium","Onix","50 000 000 so'm","Tandir","10 000 000 so'm","Mebel","FIFA chipta","Jesco to'plam","25 000 000 so'm","Damas: Labo","Umraga yo'llanma","38 000 000 so'm","Muzlatkich","Skuter","Bo'sh quti","BYD avtomobili","Qora yo'l","Ikki xonali uy","Elma  to'plami", "43 000 000 so'm"]
+            items = ["Tg Premium","Onix","50 000 000 ","Tandir","10 000 000 ","Mebel","FIFA ","Jesco ","25 000 000 ","Damas","Umra ","38 000 000 ","Muzlatkich","Skuter","Bo'sh quti","BYD","Qora yo'l","Uy","Salfetka", "43 000 000 "]
             // items = ["1000$", "5$", "50$", "100$"]
             step = 360/items.length
             colors = []
